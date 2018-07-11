@@ -1,0 +1,25 @@
+<nav>
+    <div>
+        <a href="/" class="button center">Home</a>
+    </div>
+
+    <div>
+        <a href="/departments" class="button center">All Departments</a>
+    </div>
+
+    <div>
+        <a href="/departments/new" class="button center">New Department</a>
+    </div>
+
+</nav>
+
+<p class="pageHeader">Edit Department</p>
+
+<form action="/departments/$department.getId()" method="post">
+
+    <label for="title">Title:</label>
+    <input type="text" class="inputBox" name="title" required=true id="title" value="$department.getTitle()">
+
+    <input type="submit" value="Save" class="button"/>
+
+</form>

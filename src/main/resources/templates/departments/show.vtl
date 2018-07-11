@@ -1,0 +1,51 @@
+<nav>
+    <div>
+        <a href="/" class="button center">Home</a>
+    </div>
+
+    <div>
+        <a href="/departments" class="button center">All Departments</a>
+    </div>
+
+    <div>
+        <a href="/departments/new" class="button center">New Department</a>
+    </div>
+</nav>
+
+<p class="pageHeader">All Managers</p>
+
+<div>
+    <p>Title: $department.getTitle()</p>
+    <p>
+        <tr>
+            <td> Manager: $manager.prettyName()</td>
+            <td><a href="/managers/$manager.getId()">Details</a> </td>
+        </tr>
+    </p>
+    <br>
+    <p>Engineers:</p>
+    #foreach ($engineer in $engineers)
+    <table>
+        <tr>
+            <td>$engineer.prettyName() </td>
+            <td><a href="/engineers/$engineer.getId()">Details</a></td>
+        </tr>
+
+    </table>
+    #end
+</div>
+
+<div class="multi">
+<form action="/departments/$department.getId()/edit" method="get">
+
+    <input type="submit" value="Edit" class="button"/>
+
+</form>
+
+<form action="/departments/$department.getId()/delete" method="get">
+
+    <input type="submit" value="Delete" class="button"/>
+
+</form>
+
+</div>

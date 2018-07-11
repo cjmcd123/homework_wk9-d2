@@ -1,0 +1,37 @@
+<nav>
+    <div>
+        <a href="/" class="button center">Home</a>
+    </div>
+
+    <div>
+        <a href="/engineers" class="button center">All Engineers</a>
+    </div>
+
+    <div>
+        <a href="/engineers/new" class="button center">New Engineer</a>
+    </div>
+</nav>
+
+<p class="pageHeader">Engineer</p>
+
+<div>
+    <p>Name: $engineer.prettyName()</p>
+    <p>Salary: $engineer.getSalary()</p>
+    <p>Department: $engineer.getDepartment().getTitle()</p>
+    <p>Manager: $engineer.getDepartment().manager().prettyName()</p>
+
+</div>
+
+<div class="multi">
+<form action="/engineers/$engineer.getId()/edit" method="get">
+
+    <input type="submit" value="Edit" class="button"/>
+
+</form>
+
+<form action="/engineers/$engineer.getId()/delete" method="get">
+
+    <input type="submit" value="Delete" class="button"/>
+
+</form>
+</div>

@@ -1,0 +1,34 @@
+<nav>
+    <div>
+        <a href="/" class="button center">Home</a>
+    </div>
+    <div>
+        <a href="/managers" class="button center">Managers</a>
+    </div>
+    <div>
+        <a href="/engineers" class="button center">Engineers</a>
+    </div>
+    <div>
+        <a href="/departments" class="button center">Departments</a>
+    </div>
+</nav>
+
+<p class="pageHeader">All Employees</p>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+        </tr>
+
+        #foreach ($employee in $employees)
+        <tr>
+            <td>$employee.getFirstName()</td>
+            <td>$employee.getLastName()</td>
+            <td>$employee.getDepartment().getTitle()</td>
+        </tr>
+        #end
+    </table>
+</div>

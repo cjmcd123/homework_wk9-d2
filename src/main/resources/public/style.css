@@ -1,0 +1,92 @@
+nav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 12%;
+    left: 0;
+    background-color: #689689;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 5px;
+    font-family: Courier;
+}
+
+nav div{
+margin: 15px;
+}
+
+body {
+    text-align: left;
+    min-width: 500px;
+    position:absolute;
+    top: 0%;
+    left:160px;
+    right:0px;
+    bottom:0px;
+    overflow-y:scroll;
+    font-family: Courier;
+    padding: 25px;
+    font-size: 16px;
+    background-color: #9BC1BC;
+}
+
+.multi{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.button {
+margin: 5px;
+}
+
+nav.a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+header {
+  height: 8%;
+  width: 100%;
+  background-color: #639FAB;
+  text-align: center;
+  color: white;
+  border-top: 5px;
+  font-family: Verdana;
+}
+
+.pageHeader {
+    font-size: 20px;
+    color:white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-size: 130%;
+}
+
+nav a:active {
+  text-decoration: underline;
+}
