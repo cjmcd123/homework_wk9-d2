@@ -28,7 +28,10 @@
     <label for="department">Department:</label>
     <select id="department" name="department">
         #foreach ($department in $departments)
-        <option value="$department.getId()">$department.getTitle()</option>
+        <option value="$department.getId()"
+        #if ($department.gtId() == $engineer.getDepartment().getID()) selected="selected"
+        #end>
+            $department.getTitle()</option>
         #end
     </select>
 
