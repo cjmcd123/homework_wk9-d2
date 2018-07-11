@@ -18,8 +18,16 @@
     <p>Title: $department.getTitle()</p>
     <p>
         <tr>
-            <td> Manager: $manager.prettyName()</td>
-            <td><a href="/managers/$manager.getId()">Details</a> </td>
+            <td>#if ($manager.prettyName())
+                Manager: $manager.prettyName()
+                #else Manager: NA
+                #end
+            </td>
+            <td>#if ($manager.prettyName())
+                <a href="/managers/$manager.getId()">Details
+                #end
+                </a>
+            </td>
         </tr>
     </p>
     <br>
